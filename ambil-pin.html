@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ambil PIN Pendaftaran SMK</title>
+    <style>
+        .pin-section {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background: #f8f8f8;
+        }
+
+        .pin-section h2 {
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .pin-section p {
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        #generatePinBtn {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #generatePinBtn:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+
+        #pinDisplay {
+            margin-top: 20px;
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <section class="pin-section">
+        <h2>Ambil PIN Pendaftaran SMK</h2>
+        <p>Tekan tombol di bawah untuk mendapatkan PIN unik Anda (hanya 1 kali).</p>
+        <button id="generatePinBtn">Ambil PIN</button>
+        <div id="pinDisplay"></div>
+    </section>
+
+</body>
+</html>

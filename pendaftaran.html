@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Poppins:wght@400;600&family=Teko:wght@400..700&display=swap" rel="stylesheet"/>
+  <title>Pendaftaran Calon Siswa</title>
+</head>
+<body>
+  
+  <section class="registration-section">
+    <h2>Registration</h2>
+    <form id="form-container">
+        <div class="form-columns">
+            <div class="column">
+                <label for="nama">Nama Lengkap <span>*</span></label>
+                <input type="text" id="nama" class="input-registrasi" placeholder="Masukkan nama lengkap" required>
+
+                <label for="tempat">Tempat Lahir <span>*</span></label>
+                <input type="text" id="tempat" class="input-registrasi" placeholder="Masukkan tempat lahir" required>
+
+                <div class="radio-group">
+                    <label>
+                        <input type="radio" value="Laki-laki" name="gender" required>Laki-laki
+                    </label>
+                    <label>
+                        <input type="radio" value="Perempuan" name="gender" required>Perempuan
+                    </label>
+                </div>
+                <label for="alamat">Alamat <span>*</span></label>
+                <textarea name="alamat" id="alamat" placeholder="Masukkan alamat lengkap" required></textarea>
+            </div>
+
+            <div class="column">
+                <label for="nisn">NISN <span>*</span></label>
+                <input type="number" id="nisn" class="input-registrasi" placeholder="Masukkan NISN" required>
+
+                <label for="ttl">Tanggal Lahir <span>*</span></label>
+                <input type="date" id="ttl" class="input-registrasi" required>
+
+                <select name="agama" id="agama" required>
+                    <option value="">Pilih Agama</option>
+                    <option value="Islam">Islam</option>
+                    <option value="Kristen">Kristen</option>
+                    <option value="Katolik">Katolik</option>
+                    <option value="Budha">Budha</option>
+                    <option value="Konghucu">Konghucu</option>
+                </select>
+                
+                <label for="no">No. Telepon <span>*</span></label>
+                <input type="number" id="no" class="input-registrasi" placeholder="Masukkan No. Telepon" required>
+            </div>
+        </div>
+
+        <div class="btn-form">
+            <button type="submit">Simpan Permanen</button>
+        </div>
+    </form>
+  </section>
+  
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script>document.getElementById('form-container').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    Swal.fire({
+        title: 'Apakah Anda yakin untuk simpan permanen?',
+        icon: 'question',
+        showCancelButton: true,
+        confirmButtonText: 'Iya',
+        cancelButtonText: 'Batal',
+        reverseButtons: true
+    }).then((result) => {
+        if (result.isConfirmed) {
+            Swal.fire({
+                title: 'Sukses!',
+                text: 'Data berhasil disimpan.',
+                icon: 'success'
+            }).then(() => {
+                // Reset form setelah popup sukses ditutup
+                document.getElementById('form-container').reset();
+            });
+        } else if (result.dismiss === Swal.DismissReason.cancel) {
+            Swal.fire({
+                title: 'Dibatalkan',
+                text: 'Batal disimpan.',
+                icon: 'error'
+            });
+        }
+    });
+});
+    
+  </script>
+</body>
+</html>

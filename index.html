@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Poppins:wght@400;600&family=Teko:wght@400..700&display=swap" rel="stylesheet"/>
+
+  <title>PSK Online 2025</title>
+</head>
+<body>
+<section id="login" class="login">
+  <div class="container-login">
+
+    <!-- Form Login -->
+    <div class="form-box">
+      <div class="input-siswa">
+        <div class="sapa">
+          <h4 class="login-title">Selamat Datang di Layanan Pendaftaran Online</h4>
+        </div>
+        <form id="loginForm">
+          <div class="input-container">
+            <i class="fas fa-user"></i>
+            <input type="text" id="username" placeholder="Nama" required />
+          </div>
+          <div class="input-container">
+            <i class="fas fa-lock"></i>
+            <input type="password" id="password" placeholder="Password" required />
+          </div>
+          <div class="btn-login">
+            <button type="submit">Masuk</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Gambar di samping -->
+    <div class="gambar-samping">
+      <img src="siswa.png" alt="Siswa PPDB" />
+    </div>
+
+  </div>
+</section>
+
+<!-- Script -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+  console.log("JavaScript aktif!");
+
+// Daftar username & password
+const users = [
+  { username: "1234", password: "123456" },
+  { username: "2345", password: "654321" },
+  { username: "3456", password: "112233" },
+  { username: "4567", password: "445566" },
+  { username: "5678", password: "778899" },
+  { username: "6789", password: "000111" },
+  { username: "7890", password: "222333" },
+  { username: "8901", password: "333444" },
+  { username: "9012", password: "444555" },
+  { username: "0123", password: "555666" },
+  { username: "1111", password: "666777" },
+  { username: "2222", password: "777888" },
+  { username: "3333", password: "888999" },
+  { username: "4444", password: "999000" },
+  { username: "5555", password: "123123" },
+  { username: "6666", password: "321321" },
+  { username: "7777", password: "456456" },
+  { username: "8888", password: "654654" },
+  { username: "9999", password: "789789" },
+  { username: "0000", password: "987987" },
+  { username: "1122", password: "741852" },
+  { username: "2233", password: "852963" },
+  { username: "3344", password: "963741" },
+  { username: "4455", password: "159357" },
+  { username: "5566", password: "357159" },
+  { username: "6677", password: "246824" },
+  { username: "7788", password: "135791" },
+  { username: "8899", password: "987321" },
+  { username: "9900", password: "123789" },
+  { username: "1010", password: "456123" },
+  { username: "2020", password: "321654" },
+  { username: "3030", password: "789456" },
+  { username: "4040", password: "654789" },
+  { username: "5050", password: "147258" },
+  { username: "6060", password: "258369" }
+];
+
+// Tangkap form dan event submit
+document.getElementById("loginForm").addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  const username = document.getElementById("username").value.trim();
+  const password = document.getElementById("password").value.trim();
+
+  const userValid = users.find(user => user.username === username && user.password === password);
+
+  if (userValid) {
+    Swal.fire({
+      icon: "success",
+      title: "Login Berhasil",
+      showConfirmButton: false,
+      timer: 1500
+    }).then(() => {
+      window.location.href = "beranda.html";
+    });
+  } else {
+    Swal.fire({
+      icon: "error",
+      title: "Login Gagal",
+      text: "Username tidak ditemukan!"
+    });
+  }
+});
+</script>
+</body>
+</html>
