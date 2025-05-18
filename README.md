@@ -1,0 +1,299 @@
+Catatan Penting:
+Pada repository ini, username dan password disimpan di dalam file index.html(Bawah Sendiri)
+
+Saya berencana untuk mengupload repository ini dalam beberapa minggu ke depan sebagai bagian dari proses pengembangan. Setelah itu, repository ini akan saya hapus dan menggantinya dengan file baru yang berisi pembaruan terbaru serta perbaikan yang lebih lengkap.
+
+Saat ini, tampilan dan kode yang ada belum sepenuhnya selesai atau final. Proyek ini masih dalam tahap pengembangan aktif, dan saya akan terus menyempurnakan serta menambahkan fitur-fitur baru dalam waktu dekat.
+
+Anda bebas untuk mengganti desain atau mengubah kode sesuai dengan kebutuhan dan preferensi Anda. Jangan ragu untuk berkreasi dan menyesuaikan proyek ini agar lebih cocok dengan gaya atau tujuan Anda sendiri.
+
+Terima kasih atas pengertian dan dukungan Anda selama proses ini!
+
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SIPENDA/Sistem Informasi Pendaftaran</title>
+
+  <!-- Stylesheets dan Font -->
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Teko:wght@300..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="sweetalert2.min.css">
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">SIPENDA 2025</div>
+    <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#beranda">Beranda</a></li>
+      <li><a href="#informasi">Informasi</a></li>
+      <li><a href="#tahapan">Tahap Pendaftaran</a></li>
+      <li><a href="#jalur">Jalur Pendaftaran</a></li>
+      <li><a href="#">Profil</a></li>
+    </ul>
+  </nav>
+  <!-- End Navbar -->
+
+  <!-- Section Beranda -->
+  <section id="beranda" class="beranda">
+    <div class="group-beranda">
+      <div class="foto-utama">
+        <img src="siswa-utama.png" alt="">
+      </div> <!-- .foto-utama -->
+
+      <div class="content-utama">
+        <h1>Transformasi Pendaftaran Era Terbaru</h1>
+        <p>
+          Berbagai macam model pendaftaran yang dapat dipilih untuk mensukseskan implementasi 
+          <span>SIPENDA (Sistem Informasi Pendaftaran)</span>
+        </p>
+        <div class="btn-utama">
+          <button type="button" id="btn-daftar" class="btn-utm">
+            <i class="fa-solid fa-rectangle-list"></i>Baca Panduan
+          </button>
+          <button type="button" id="btn-hubungi" class="btn-utm">
+            <i class="fa-solid fa-bullhorn"></i> Pengumuman
+          </button>
+        </div> <!-- .btn-utama -->
+      </div> <!-- .content-utama -->
+    </div> <!-- .group-beranda -->
+  </section>
+  <!-- End Section Beranda -->
+
+  <!-- Section Informasi -->
+  <section id="informasi" class="Informasi">
+    <div class="content-informasi">
+      <div class="induk-box">
+
+        <!-- Informasi Penting -->
+        <div class="item-box">
+          <h1>Informasi Penting</h1>
+          <p class="deskripsi-informasi">Pengumuman terbaru SIPENDA Jawa Timur 2025</p>
+
+          <div class="box-dalam">
+            <h3>Tonton vidio panduan SIPENDA Jawa Timur 2025</h3>
+            <p>Silahkan tonton vidio tata cara SIPENDA Jawa Timur 2025 <a href="#">disini</a></p>
+          </div> <!-- .box-dalam -->
+
+          <div class="box-dalam" id="box-2">
+            <h3>Baca panduan SIPENDA Jawa Timur 2025</h3>
+            <p>Silahkan baca panduan alur tahapan SIPENDA Jawa Timur 2025 <a href="#">disini</a></p>
+          </div> <!-- .box-dalam#box-2 -->
+        </div> <!-- .item-box -->
+
+        <!-- Kegiatan Berlangsung -->
+        <div class="item-box">
+          <h1>Kegiatan Berlangsung</h1>
+          <p>Jam dan jadwal lengkap dapat di cek pada halaman jadwal</p>
+
+          <div class="box-dalam">
+            <h3>Sosialisasi Juknis SIPENDA Jatim 2025</h3>
+            <div class="penjelasan-berlangsung">
+              <p>Januari s.d. Mei 2025</p>
+              <p>Jam Kerja</p>
+            </div> <!-- .penjelasan-berlangsung -->
+          </div> <!-- .box-dalam -->
+
+          <div class="btn-berlangsung">
+            <button type="button" onclick="window.location.href='jadwal.html';">Lihat Jadwal</button>
+          </div> <!-- .btn-berlangsung -->
+        </div> <!-- .item-box -->
+
+      </div> <!-- .induk-box -->
+    </div> <!-- .content-informasi -->
+  </section>
+  <!-- End Section Informasi -->
+
+
+<!-- Start section ketentuan -->
+
+<section id="ketentuan" class="ketentuan">
+  <div class="container-ketentuan">
+    <div class="item-box-ketentuan">
+      <div class="ikon-ketentuan">
+        
+      </div> <!-- Penutup .ikon-ketentuan-->
+    </div> <!-- Penutup .item-box-ketentuan -->
+  </div> <!-- Penutup .container-ketentuan -->
+</section>
+
+<!-- End section ketentuan -->
+
+
+<!-- Start section tahapan -->
+
+<section id="tahapan" class="tahapan">
+  <div class="group-tahapan">
+    <div class="item-tahapan">
+      <div class="ikon-tahapan">
+        <i class="fa-solid fa-book"></i>
+      </div>
+      <div class="judul-tahapan">
+        <h1>Registrasi</h1>
+        <p>Pahami terlebih dahulu syarat, ketentuan dan prosedur SIPENDA Jawa Timur 2025</p>
+      </div>
+      <div class="btn-tahapan">
+        <button type="button" onclick="window.location.href='pendaftaran.html';">Registrasi</button>
+      </div>
+    </div>
+    
+    <div class="item-tahapan">
+      <div class="ikon-tahapan">
+        <i class="fa-solid fa-clipboard"></i>
+      </div>
+      <div class="judul-tahapan">
+        <h1>Verifikasi Rapor</h1>
+        <p>Lakukan pengecekan verifikasi rapor semester 1 sampai semester 5 dari SMP/MTs/Sederajat yang bersangkutan</p>
+      </div>
+      <div class="btn-tahapan">
+        <button type="button">Verifikasi Rapor</button>
+      </div>
+    </div>
+    
+    <div class="item-tahapan">
+      <div class="ikon-tahapan">
+        <i class="fa-solid fa-unlock-keyhole"></i>
+      </div>
+      <div class="judul-tahapan">
+        <h1>Pengambilan Pin</h1>
+        <p>Lakukan pengambilan pin yang akan digunakan untuk melakukan registrasi SIPENDA Jawa Timur 2025</p>
+      </div>
+      <div class="btn-tahapan">
+        <button type="button" onclick="window.location.href='ambil-pin.html';">Ambil Pin</button>
+      </div>
+    </div>
+    
+    <div class="item-tahapan">
+      <div class="ikon-tahapan">
+        <i class="fa-solid fa-laptop-file"></i>
+      </div>
+      <div class="judul-tahapan">
+        <h1>Pendaftaran SIPENDA</h1>
+        <p>Pastikan seluruh data yang anda masukkan benar dan sesuai, setelah berhasil mendaftar, anda harus melakukan cetak bukti pendaftaran</p>
+      </div>
+      <div class="btn-tahapan">
+        <button type="button" onclick="window.location.href='#jalur';">Daftar SIPENDA</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- end section tahapan -->
+
+<!-- Start section jalur -->
+
+<section class="jalur-section" id="jalur">
+  <div class="jalur-card">
+    <div class="icon-wrapper">
+      <i class="fa-solid fa-puzzle-piece"></i>
+    </div>
+    <div class="content">
+      <h2>Jalur Afirmasi</h2>
+      <p>
+        Diperuntukkan bagi calon murid baru yang berasal dari keluarga tidak mampu dan Afirmasi Pendidikan Menengah (ADEM), anak buruh dari keluarga tidak mampu, dan penyandang disabilitas.
+      </p>
+      <button class="btn-disabled" disabled>
+        Daftar (SMA & SMK)
+       <i class="fas fa-lock"></i>
+      </button>
+    </div>
+    <a href="#" class="baca-ketentuan">Baca Ketentuan</a>
+  </div>
+  
+  <div class="jalur-card">
+    <div class="icon-wrapper">
+      <i class="fa-solid fa-suitcase"></i>
+    </div>
+    <div class="content">
+      <h2>Jalur Mutasi Orang Tua/Wali</h2>
+      <p>
+        Diperuntukkan bagi calon murid baru yang harus mengikuti orang tua/wali berpindah tugas ke tempat tugas yang baru dan anak guru/tenaga kependidikan.
+      </p>
+      <button class="btn-disabled" disabled>
+        Daftar (SMA & SMK)
+       <i class="fas fa-lock"></i>
+      </button>
+    </div>
+    <a href="#" class="baca-ketentuan">Baca Ketentuan</a>
+  </div>
+  
+  <div class="jalur-card">
+    <div class="icon-wrapper">
+      <i class="fa-solid fa-medal"></i>
+    </div>
+    <div class="content">
+      <h2>Jalur Prestasi Hasil Lomba</h2>
+      <p>
+        Diperuntukkan bagi calon murid baru yang sistem penilaiannya dinilai berdasarkan lomba-lomba bidang akademik dan non-akademik yang telah diperoleh.
+      </p>
+      <button class="btn-disabled" disabled>
+        Daftar (SMA & SMK)
+       <i class="fas fa-lock"></i>
+      </button>
+    </div>
+    <a href="#" class="baca-ketentuan">Baca Ketentuan</a>
+  </div>
+  
+  <div class="jalur-card">
+    <div class="icon-wrapper">
+      <i class="fa-solid fa-location-dot"></i>
+    </div>
+    <div class="content">
+      <h2>Jalur Domisili</h2>
+      <p>
+        Diperuntukkan bagi calon murid baru yang berdomisili di suatu rayon berdasarkan alamat pada kartu keluarga.
+      </p>
+      <button class="btn-disabled" disabled>
+        Daftar (SMA & SMK)
+       <i class="fas fa-lock"></i>
+      </button>
+    </div>
+    <a href="#" class="baca-ketentuan">Baca Ketentuan</a>
+  </div>
+</section>
+
+<!-- End section jalur -->
+
+  <!-- Script -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="sweetalert2.min.js"></script>
+  <script src="https://kit.fontawesome.com/your_kit_code.js" crossorigin="anonymous"></script>
+  <script>
+    
+    // Ambil elemen toggle dan nav links
+const menuToggle = document.getElementById("menu-toggle");
+const navLinks = document.getElementById("nav-links");
+
+// Toggle menu saat tombol diklik
+menuToggle.addEventListener("click", () => {
+  navLinks.classList.toggle("show");
+});
+
+// Tutup menu saat klik di luar menu dan toggle
+document.addEventListener("click", (e) => {
+  const isClickInside = navLinks.contains(e.target) || menuToggle.contains(e.target);
+  if (!isClickInside) {
+    navLinks.classList.remove("show");
+  }
+});
+
+// Tutup menu saat salah satu link diklik
+document.querySelectorAll(".nav-links a").forEach(link => {
+  link.addEventListener("click", () => {
+    navLinks.classList.remove("show");
+  });
+});
+
+// pin
+
+    
+  </script>
+</body>
+</html>
